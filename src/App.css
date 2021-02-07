@@ -39,31 +39,11 @@
 
 .btn {
   color: white;
-  border-radius: 1em;
+  border-radius: 50%;
   height: fit-content;
+  width: max-content;
   border: 0px;
   box-shadow: 0em 0em .5em black;
   margin: .1em;
   padding: 1em;
-}
-
-.btn.white {
-  background: white;
-  color: black;
-}
-
-.btn.blue {
-  background: blue;
-}
-
-.btn.black {
-  background: black;
-}
-
-.btn.red {
-  background: red;
-}
-
-.btn.green {
-  background: green;
 }

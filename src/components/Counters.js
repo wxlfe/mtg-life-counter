@@ -2,25 +2,19 @@ import React, { useState } from 'react'
 import Counter from './Counter'
 import CounterAdder from './CounterAdder'
 
-const Counters = () => {
+const Counters = ({ counters, addCounter, removeCounter }) => {
 
-    const defaultState = [
-        {
-            color: 'white',
-        },
-        {
-            color: 'red',
-        },
-    ]
-    
-    const [ counters, setCounters ] = useState(defaultState);
+    const final = [];
 
-    const colors = ['white', 'blue', 'black', 'red', 'green'];
-    
+    for (let i = 0; i < counters; i++) {
+        final.push(<Counter key={i} />);
+    }
+
+    final.push(<CounterAdder addCounter={addCounter} removeCounter={removeCounter} />);
+
     return (
         <>
-            {counters.map((counter, index) => (<Counter key={index} color={counter.color}/>))}
-            {colors.map((color, index) => (<CounterAdder key={index} setCounters={setCounters} color={color}/>))}
+            {final}
         </>
     )
 }
