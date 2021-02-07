@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import CounterAdder from './components/CounterAdder';
 import Counters from './components/Counters';
-import Counter from './components/Counter'
 
 function App() {
 
